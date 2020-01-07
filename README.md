@@ -1,7 +1,8 @@
 
-# LinkedIn Learning
-# [Extending, Securing and Dockerizing Spring Boot Microservices](http://linkedin-learning.pxf.io/3aGqA)
-## Exercise files by Mary Ellen Bowman
+
+# [Extending, Securing and Dockerizing](http://linkedin-learning.pxf.io/3aGqA)
+# [Spring Boot Microservices](http://linkedin-learning.pxf.io/3aGqA)
+## Exercise files by Mary Ellen Bowman for LinkedIn Learning
 
 [Mary Ellen's LinkedIn Profile](https://www.linkedin.com/in/mebowman/ "Mary Ellen's LinkedIn Page")
 
@@ -26,30 +27,30 @@ _Twitter: @MEllenBowman_
 #### 1.6 Decorate paging APIs with HATEOAS links
 
 ### 2. Hardening the Microservice
-#### Adding a runtime logger
-#### Unit testing with Mockito vs. integration testing
-#### RESTful API testing with JUnit
-#### Documenting APIs with Swagger
+#### 2.1 Adding a runtime logger
+#### 2.2 Unit testing with Mockito vs. integration testing
+#### 2.3 RESTful API testing with JUnit
+#### 2.4 Documenting APIs with Swagger
 
 ### 3. Spring Security with JSON Web Tokens (JWT)
-#### Users and roles
-#### Spring Security authentication
-#### Password encryption
-#### Understanding JWT
-#### Configuring Spring Security for JWT for authorization
-#### Securing APIs
+#### 3.1 Users and roles
+#### 3.2 Spring Security authentication
+#### 3.3 Password encryption
+#### 3.4 Understanding JWT
+#### 3.5 Configuring Spring Security for JWT for authorization
+#### 3.6 Securing APIs
 
 ### 4. Leveraging Docker for MySQL Database Access
-#### What is Docker?
-#### Running the application with MySQL container
-#### Database migration with Flyway
-#### Selecting Spring profiles at runtime
+#### 4.1 What is Docker?
+#### 4.2 Running the application with MySQL container
+#### 4.3 Database migration with Flyway
+#### 4.4 Selecting Spring profiles at runtime
 
 ### 5. Dockerizing Your Microservice
-#### Create and run a Java application Docker image
-#### Link the Java application and database Docker containers
-#### Separate application image from database migration
-#### Leverage a Docker Maven plugin
-#### Sharing images with Docker hub
-#### Save Sharing images with Docker hub
+#### 5.1 Create and run a Java application Docker image
+#### 5.2 Link the Java application and database Docker containers
+#### 5.3 Separate application image from database migration
+#### 5.4 Leverage a Docker Maven plugin
+#### 5.5 Sharing images with Docker hub
+#### 5.6 Save Sharing images with Docker hub
 
