@@ -1,6 +1,7 @@
-# Extending, Securing and Dockerizing Spring Boot Microservices
-## by Mary Ellen Bowman
-[LinkedIn Learning Course "Extending Securing and Dockerizing Spring Boot Microservices" by Mary Ellen Bowman](http://linkedin-learning.pxf.io/3aGqA)
+
+# LinkedIn Learning
+# [Extending, Securing and Dockerizing Spring Boot Microservices](http://linkedin-learning.pxf.io/3aGqA)
+## Exercise files by Mary Ellen Bowman
 
 [Mary Ellen's LinkedIn Profile](https://www.linkedin.com/in/mebowman/ "Mary Ellen's LinkedIn Page")
 
@@ -17,12 +18,12 @@ _Twitter: @MEllenBowman_
 
 ### 1. Enhancing a Spring Boot Microservice
 
-#### Reviewing the original Spring Boot microservice
-#### Running the microservice
-#### Define the schema and default data
-#### Identify transactional business services boundaries
-#### Leveraging Spring HATEOAS
-#### Decorate paging APIs with HATEOAS links
+#### 1.1 Reviewing the original Spring Boot microservice
+#### 1.2 Running the microservice
+#### 1.3 Define the schema and default data
+#### 1.4 Identify transactional business services boundaries
+#### 1.5 Leveraging Spring HATEOAS
+#### 1.6 Decorate paging APIs with HATEOAS links
 
 ### 2. Hardening the Microservice
 #### Adding a runtime logger
