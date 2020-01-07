@@ -1,21 +1,13 @@
 
 
-# [Extending, Securing and Dockerizing](http://linkedin-learning.pxf.io/3aGqA)
-# [Spring Boot Microservices](http://linkedin-learning.pxf.io/3aGqA)
-## Exercise files by Mary Ellen Bowman for LinkedIn Learning
+## [Extending, Securing and Dockerizing Spring Boot Microservices](http://linkedin-learning.pxf.io/3aGqA)
+## [  by Mary Ellen Bowman for LinkedIn Learning](http://linkedin-learning.pxf.io/3aGqA)
 
-[Mary Ellen's LinkedIn Profile](https://www.linkedin.com/in/mebowman/ "Mary Ellen's LinkedIn Page")
-
-[Mary Ellen's LinkedIn Learning Author Page](https://www.linkedin.com/learning/instructors/mary-ellen-bowman "Mary Ellen's LinkedIn Page")
-
-_Twitter: @MEllenBowman_
-
-[Live Interview with Mary Ellen](http://bit.ly/MaryEllenBowman "Live Interview with Mary Ellen")
+### [LinkedIn Profile](https://www.linkedin.com/in/mebowman/), [Author Page](https://www.linkedin.com/learning/instructors/mary-ellen-bowman), [_Twitter: @MEllenBowman_](https://twitter.com/MEllenBowman), [Live Interview](http://bit.ly/MaryEllenBowman)
 
 
 ### Repository contain exercises from the course
-### Branches correspond to videos (chapter-lesson)
-### Master is the final capstone project result
+Branches correspond to videos (chapter-lesson), Master branch is the final capstone project result
 
 ### 1. Enhancing a Spring Boot Microservice
 
