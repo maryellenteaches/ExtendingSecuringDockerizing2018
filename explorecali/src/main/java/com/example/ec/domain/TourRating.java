@@ -77,38 +77,64 @@ public class TourRating {
         }
     }
 
+    /**
+     * Get the identifier
+     *
+     * @return identifier
+     */
     public Integer getId() {
         return id;
     }
 
+    /**
+     * Get the score.
+     *
+     * @return score
+     */
     public Integer getScore() {
         return score;
     }
 
+    /**
+     * Get the comment.
+     *
+     * @return comment
+     */
     public String getComment() {
         return comment;
     }
 
+    /**
+     * Get the tour.
+     *
+     * @return tour
+     */
     public Tour getTour() {
         return tour;
     }
 
-    public void setTour(Tour tour) {
-        this.tour = tour;
-    }
-
+    /**
+     * Get the customer identifier
+     *
+     * @return customer identifier
+     */
     public Integer getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(Integer customerId) {
-        this.customerId = customerId;
-    }
-
+    /**
+     * Set the score.
+     *
+     * @param score score
+     */
     public void setScore(Integer score) {
         this.score = score;
     }
 
+    /**
+     * set the comment.
+     * @param comment comment
+     */
     public void setComment(String comment) {
         this.comment = comment;
     }

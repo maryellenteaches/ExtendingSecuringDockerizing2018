@@ -48,63 +48,107 @@ public class Tour implements Serializable{
     @Column
     private Region region;
 
-    public Tour(String title, String description, String blurb, Integer price, String duration, String bullets,
-                String keywords, TourPackage tourPackage, Difficulty difficulty, Region region) {
-        this.title = title;
-        this.description = description;
-        this.blurb = blurb;
-        this.price = price;
-        this.duration = duration;
-        this.bullets = bullets;
-        this.keywords = keywords;
-        this.tourPackage = tourPackage;
-        this.difficulty = difficulty;
-        this.region = region;
-    }
-
+    /**
+     * No public constructor. Entity is only constructed from database.
+     */
     protected Tour() {
     }
 
+    /**
+     * Get the identifier.
+     *
+     * @return identifier
+     */
     public Integer getId() {
         return id;
     }
 
+    /**
+     * Get the title
+     *
+     * @return title
+     */
     public String getTitle() {
         return title;
     }
 
+    /**
+     * Get the description
+     *
+     * @return description
+     */
     public String getDescription() {
         return description;
     }
 
+    /**
+     * Get the blurb
+     *
+     * @return blurb
+     */
     public String getBlurb() {
         return blurb;
     }
 
+    /**
+     * Get the price
+     *
+     * @return price
+     */
     public Integer getPrice() {
         return price;
     }
 
+    /**
+     * Get the duration.
+     *
+     * @return duration
+     */
     public String getDuration() {
         return duration;
     }
 
+    /**
+     * Get comma-separated list of items as a string.
+     *
+     * @return bullets
+     */
     public String getBullets() {
         return bullets;
     }
 
+    /**
+     * Get the keywords.
+     *
+     * @return keywords
+     */
     public String getKeywords() {
         return keywords;
     }
 
+    /**
+     * Return the TourPackage
+     *
+     * @return tour package
+     */
     public TourPackage getTourPackage() {
         return tourPackage;
     }
 
+    /**
+     * Get the difficulty.
+     *
+     * @return difficulty
+     */
     public Difficulty getDifficulty() {
         return difficulty;
     }
 
+    /**
+     * Get the region
+     *
+     * @return region
+     */
     public Region getRegion() {
         return region;
     }

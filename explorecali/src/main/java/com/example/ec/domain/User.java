@@ -19,14 +19,6 @@ public class User {
     @Column(name = "id")
     private Long id;
 
-    public User(String username, String password, Role role, String firstName, String lastName) {
-        this.username = username;
-        this.password = password;
-        this.roles = Arrays.asList(role);
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-
     @Column(name = "username")
     private String username;
 
@@ -40,67 +32,88 @@ public class User {
     @Column(name = "last_name")
     private String lastName;
 
-    /**
-     * Default Constructor.
-     */
-    protected User() {
-    }
-
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "user_role", joinColumns
             = @JoinColumn(name = "user_id",
             referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "role_id",
                     referencedColumnName = "id"))
-
-
     private List<Role> roles;
 
+    /**
+     * Construct a fully initialized Object.
+     *
+     * @param username username
+     * @param password password
+     * @param role role
+     * @param firstName first name
+     * @param lastName last name
+     */
+    public User(String username, String password, Role role, String firstName, String lastName) {
+        this.username = username;
+        this.password = password;
+        this.roles = Arrays.asList(role);
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    /**
+     * Default Constructor.
+     */
+    protected User() {
+    }
+
+    /**
+     * Get the identifier.
+     *
+     * @return identifier
+     */
     public Long getId() {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
+    /**
+     * Get the username.
+     *
+     * @return username
+     */
     public String getUsername() {
         return username;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
+    /**
+     * Get the password.
+     *
+     * @return password
+     */
     public String getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
+    /**
+     * Get the first name.
+     *
+     * @return first name
+     */
     public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
+    /**
+     * Get the last name.
+     *
+     * @return last name
+     */
     public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
+    /**
+     * Get the roles.
+     *
+     * @return roles
+     */
     public List<Role> getRoles() {
         return roles;
-    }
-
-    public void setRoles(List<Role> roles) {
-        this.roles = roles;
     }
 }

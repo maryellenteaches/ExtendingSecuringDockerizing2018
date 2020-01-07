@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 /**
  * Entity of a Security Role
- * Created by Mary Ellen BOwman
+ * Created by Mary Ellen Bowman
  */
 @Entity
 @Table(name="security_role")
@@ -26,27 +26,49 @@ public class Role  implements GrantedAuthority {
     public String getAuthority() {
         return roleName;
     }
+
+    /**
+     * Get the identifier.
+     *
+     * @return identifier
+     */
     public Long getId() {
         return id;
     }
 
+    /**
+     * Set the identifier
+     *
+     * @param id identifier
+     */
     public void setId(Long id) {
         this.id = id;
     }
 
-    public String getRoleName() {
-        return roleName;
-    }
-
+    /**
+     * Set the role name
+     *
+     * @param roleName role name
+     */
     public void setRoleName(String roleName) {
         this.roleName = roleName;
     }
 
-    public String getDescription() {
-        return description;
+    /**
+     * Get the role name
+     *
+     * @return role name
+     */
+    public String getRoleName() {
+        return roleName;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    /**
+     * Get the description
+     *
+     * @return description
+     */
+    public String getDescription() {
+        return description;
     }
 }

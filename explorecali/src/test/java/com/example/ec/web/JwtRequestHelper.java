@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Component;
 
-import java.util.Arrays;
+import java.util.Collections;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON;
 
@@ -29,7 +29,7 @@ public class JwtRequestHelper {
         HttpHeaders headers = new HttpHeaders();
         Role r = new Role();
         r.setRoleName(roleName);
-        String token =  jwtProvider.createToken("anonymous", Arrays.asList(r));
+        String token =  jwtProvider.createToken("anonymous", Collections.singletonList(r));
         headers.setContentType(APPLICATION_JSON);
         headers.add("Authorization", "Bearer " + token);
         return headers;

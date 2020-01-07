@@ -11,15 +11,15 @@ import static org.junit.Assert.*;
 public class TourPackageTest {
     @Test
     public void testConstructorAndGetters() throws Exception {
-        TourPackage p = new TourPackage("CC","name");
+        TourPackage p = TestHelper.makePackage();
         assertThat(p.getName(), is("name"));
-        assertThat(p.getCode(), is("CC"));
+        assertThat(p.getCode(), is("code"));
     }
 
     @Test
-    public void equalsHashcodeVerify() {
-        TourPackage p1 = new TourPackage("CC","name");
-        TourPackage p2 = new TourPackage("CC","name");
+    public void equalsHashcodeVerify() throws IllegalAccessException {
+        TourPackage p1 = TestHelper.makePackage();
+        TourPackage p2 = TestHelper.makePackage();
 
         assertThat(p1,is(p2));
         assertThat(p1.hashCode(), is(p2.hashCode()));

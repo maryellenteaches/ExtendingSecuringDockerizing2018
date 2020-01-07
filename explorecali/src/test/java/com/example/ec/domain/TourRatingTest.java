@@ -4,7 +4,6 @@ import org.junit.Test;
 
 import static org.hamcrest.Matchers.nullValue;
 import static org.hamcrest.core.Is.is;
-import static org.hamcrest.core.IsNull.notNullValue;
 import static org.junit.Assert.*;
 
 /**
@@ -12,8 +11,10 @@ import static org.junit.Assert.*;
  */
 public class TourRatingTest {
 
-    private Tour tour = new Tour("title","description","blurb", 50, "1 day", "bullet",
-            "keywords",new TourPackage("CC","name"), Difficulty.Difficult, Region.Central_Coast);
+    private Tour tour = TestHelper.makeTour();
+
+    public TourRatingTest() throws IllegalAccessException {
+    }
 
     @Test
     public void testConstructor1() throws Exception {

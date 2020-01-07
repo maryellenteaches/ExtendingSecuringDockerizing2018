@@ -23,7 +23,7 @@ public class ExploreCaliUserDetailsService implements UserDetailsService {
     private UserRepository userRepository;
 
     @Autowired
-    JwtProvider jwtProvider;
+    private JwtProvider jwtProvider;
 
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {

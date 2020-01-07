@@ -21,18 +21,26 @@ public class TourPackage implements Serializable {
     @Column
     private String name;
 
+    /**
+     * No public constructor. Entity is only constructed from database.
+     */
     protected TourPackage() {
     }
 
-    public TourPackage(String code, String name) {
-        this.code = code;
-        this.name = name;
-    }
-
+    /**
+     * Get the code.
+     *
+     * @return code
+     */
     public String getCode() {
         return code;
     }
 
+    /**
+     * Get the name.
+     *
+     * @return name
+     */
     public String getName() {
         return name;
     }

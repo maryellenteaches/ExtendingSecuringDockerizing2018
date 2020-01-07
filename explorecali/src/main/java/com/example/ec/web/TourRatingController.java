@@ -84,8 +84,7 @@ public class TourRatingController {
                                                           PagedResourcesAssembler pagedAssembler) {
         LOGGER.info("GET /tours/{}/ratings", tourId);
         Page<TourRating> tourRatingPage = tourRatingService.lookupRatings(tourId, pageable);
-        PagedResources<RatingDto> result =  pagedAssembler.toResource(tourRatingPage, assembler);
-        return result;
+        return pagedAssembler.toResource(tourRatingPage, assembler);
     }
 
     /**
@@ -97,7 +96,7 @@ public class TourRatingController {
     @GetMapping("/average")
     public AbstractMap.SimpleEntry<String, Double> getAverage(@PathVariable(value = "tourId") int tourId) {
         LOGGER.info("GET /tours/{}/ratings/average", tourId);
-        return new AbstractMap.SimpleEntry<String, Double>("average", tourRatingService.getAverageScore(tourId));
+        return new AbstractMap.SimpleEntry<>("average", tourRatingService.getAverageScore(tourId));
     }
 
     /**

@@ -14,7 +14,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -80,7 +80,7 @@ public class UserControllerTest {
 
     @Test
     public void getAllUsers() {
-        when(service.getAll()).thenReturn(Arrays.asList(user));
+        when(service.getAll()).thenReturn(Collections.singletonList(user));
 
         ResponseEntity<List<User>> response = restTemplate.exchange("/users",
                 GET,

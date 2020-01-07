@@ -14,7 +14,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.Optional;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -53,7 +53,7 @@ public class TourRatingServiceTest {
         when(tourRepositoryMock.findById(TOUR_ID)).thenReturn(Optional.of(tourMock));
         when(tourMock.getId()).thenReturn(TOUR_ID);
         when(tourRatingRepositoryMock.findByTourIdAndCustomerId(TOUR_ID,CUSTOMER_ID)).thenReturn(Optional.of(tourRatingMock));
-        when(tourRatingRepositoryMock.findByTourId(TOUR_ID)).thenReturn(Arrays.asList(tourRatingMock));
+        when(tourRatingRepositoryMock.findByTourId(TOUR_ID)).thenReturn(Collections.singletonList(tourRatingMock));
     }
 
     /**************************************************************************************
@@ -71,7 +71,7 @@ public class TourRatingServiceTest {
 
     @Test
     public void lookupAll() {
-        when(tourRatingRepositoryMock.findAll()).thenReturn(Arrays.asList(tourRatingMock));
+        when(tourRatingRepositoryMock.findAll()).thenReturn(Collections.singletonList(tourRatingMock));
 
         //invoke and verify lookupAll
         assertThat(service.lookupAll().get(0), is(tourRatingMock));

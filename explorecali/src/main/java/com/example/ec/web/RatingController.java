@@ -18,7 +18,7 @@ import java.util.NoSuchElementException;
 /**
  * Created by Mary Ellen Bowman
  */
-@Api(description = "API to just pull ratings")
+@Api("API to just pull ratings")
 @RestController
 @RequestMapping(path = "/ratings")
 public class RatingController {

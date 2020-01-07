@@ -21,7 +21,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static org.hamcrest.core.Is.is;
@@ -119,7 +119,7 @@ public class TourRatingControllerTest {
      */
     @Test
     public void getAllRatingsForTour() throws Exception {
-        List<TourRating> listOfTourRatings = Arrays.asList(tourRatingMock);
+        List<TourRating> listOfTourRatings = Collections.singletonList(tourRatingMock);
         Page<TourRating> page = new PageImpl(listOfTourRatings, PageRequest.of(0,10),1);
         when(serviceMock.lookupRatings(anyInt(),any(Pageable.class))).thenReturn(page);
 
