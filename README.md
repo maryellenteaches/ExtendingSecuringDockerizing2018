@@ -13,6 +13,8 @@ _Twitter: @MEllenBowman_
 
 ### Repository contain exercises from the course
 ### Branches correspond to videos (chapter-lesson)
+### Master is the final capstone project result
+
 ### 1. Enhancing a Spring Boot Microservice
 
 #### Reviewing the original Spring Boot microservice
