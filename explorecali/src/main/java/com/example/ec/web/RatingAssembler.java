@@ -14,7 +14,7 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 /**
  * Rating Assembler, convert TourRating to a Hateoas Supported Rating class
  *
- * Created by maryellenbowman.
+ * Created by Mary Ellen Bowman.
  */
 @Component
 public class RatingAssembler extends ResourceAssemblerSupport<TourRating,RatingDto> {
@@ -22,7 +22,12 @@ public class RatingAssembler extends ResourceAssemblerSupport<TourRating,RatingD
     //Helper to fetch Spring Data Rest Repository links.
     private RepositoryEntityLinks entityLinks;
 
-    public RatingAssembler( RepositoryEntityLinks entityLinks) {
+    /**
+     * Construct a fully initialized Object.
+     *
+     * @param entityLinks entity links helper class
+     */
+    public RatingAssembler(RepositoryEntityLinks entityLinks) {
         super(RatingController.class, RatingDto.class);
         this.entityLinks = entityLinks;
     }
@@ -31,7 +36,7 @@ public class RatingAssembler extends ResourceAssemblerSupport<TourRating,RatingD
      *  Generates "self", "rating" and tour links
      *
      * @param tourRating Tour Rating Entity
-     * @return
+     * @return RatingDto with Hateous
      */
     @Override
     public RatingDto toResource(TourRating tourRating) {

@@ -15,7 +15,8 @@ import java.util.ArrayList;
 import static springfox.documentation.builders.PathSelectors.any;
 
 /**
- * Main Class for the Spring Boot Application
+ * Main Class for the Explore California microservice
+ * to support the backend of the http://explorecalifornia.org/ website.
  *
  * Created by Mary Ellen Bowman
  */

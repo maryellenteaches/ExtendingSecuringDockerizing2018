@@ -153,9 +153,9 @@ public class TourRatingService {
     /**
      * Service for many customers to give the same score for a service
      *
-     * @param tourId
-     * @param score
-     * @param customers
+     * @param tourId tour identifier
+     * @param score score
+     * @param customers array of customer identifiers
      */
     public void rateMany(int tourId,  int score, Integer [] customers) {
         LOGGER.info("Rate tour {} by customers {}", tourId, Arrays.asList(customers).toString());
@@ -169,7 +169,7 @@ public class TourRatingService {
     /**
      * Verify and return the Tour given a tourId.
      *
-     * @param tourId
+     * @param tourId tour identifier
      * @return the found Tour
      * @throws NoSuchElementException if no Tour found.
      */
@@ -182,8 +182,8 @@ public class TourRatingService {
 
     /**
      * Verify and return the TourRating for a particular tourId and Customer
-     * @param tourId
-     * @param customerId
+     * @param tourId tour identifier
+     * @param customerId customer identifier
      * @return the found TourRating
      * @throws NoSuchElementException if no TourRating found
      */

@@ -64,8 +64,8 @@ public class ExploreCaliUserDetailsService implements UserDetailsService {
     /**
      * Extract the username from the JWT then lookup the user in the database.
      *
-     * @param jwtToken
-     * @return
+     * @param jwtToken jwt Token string
+     * @return Optional of UserDetails
      */
     public Optional<UserDetails> loadUserByJwtTokenAndDatabase(String jwtToken) {
         if (jwtProvider.isValidToken(jwtToken)) {

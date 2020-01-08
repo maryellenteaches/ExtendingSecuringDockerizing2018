@@ -43,8 +43,8 @@ public class TourRatingController {
     /**
      * Create a Tour Rating.
      *
-     * @param tourId
-     * @param ratingDto
+     * @param tourId tour identifier
+     * @param ratingDto rating dto
      */
     @PostMapping
     @PreAuthorize("hasRole('ROLE_CSR')")
@@ -57,9 +57,9 @@ public class TourRatingController {
     /**
      * Create Several Tour Ratings for one tour, score and several customers.
      *
-     * @param tourId
-     * @param score
-     * @param customers
+     * @param tourId tour identifier
+     * @param score score
+     * @param customers array of customer identifiers
      */
     @PostMapping("/{score}")
     @PreAuthorize("hasRole('ROLE_CSR')")
@@ -74,9 +74,9 @@ public class TourRatingController {
      /**
      * Lookup a the Ratings for a tour.
      *
-     * @param tourId
-     * @param pageable
-     * @param pagedAssembler
+     * @param tourId tour identifier
+     * @param pageable pageable object injected by the framework
+     * @param pagedAssembler pagedAssembler injected by the framework
      * @return HATEOAS enabled page of ratings.
      */
     @GetMapping
@@ -90,7 +90,7 @@ public class TourRatingController {
     /**
      * Calculate the average Score of a Tour.
      *
-     * @param tourId
+     * @param tourId tour identifier
      * @return Tuple of "average" and the average value.
      */
     @GetMapping("/average")
@@ -102,8 +102,8 @@ public class TourRatingController {
     /**
      * Update score and comment of a Tour Rating
      *
-     * @param tourId
-     * @param ratingDto
+     * @param tourId tour identifier
+     * @param ratingDto rating dto
      * @return The modified Rating DTO.
      */
     @PutMapping
@@ -116,8 +116,8 @@ public class TourRatingController {
     /**
      * Update score or comment of a Tour Rating
      *
-     * @param tourId
-     * @param ratingDto
+     * @param tourId tour identifier
+     * @param ratingDto rating dto
      * @return The modified Rating DTO.
      */
     @PatchMapping
@@ -131,8 +131,8 @@ public class TourRatingController {
     /**
      * Delete a Rating of a tour made by a customer
      *
-     * @param tourId
-     * @param customerId
+     * @param tourId tour identifier
+     * @param customerId customer identifier
      */
     @DeleteMapping("/{customerId}")
     @PreAuthorize("hasRole('ROLE_CSR')")
@@ -144,8 +144,9 @@ public class TourRatingController {
     /**
      * Convert the TourRating entity to a RatingDto
      *
-     * @param tourRating
-     * @return RatingDto
+     * @param tourRating tour rating object
+     * @return RatingDto ratingDto rating dto
+     *
      */
     private RatingDto toDto(TourRating tourRating) {
         return assembler.toResource(tourRating);

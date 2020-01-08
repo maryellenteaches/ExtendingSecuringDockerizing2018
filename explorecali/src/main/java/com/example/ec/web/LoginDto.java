@@ -3,6 +3,8 @@ package com.example.ec.web;
 import javax.validation.constraints.NotNull;
 
 /**
+ * Information supplied when attempting to login.
+ *
  * Created By Mary Ellen Bowman
  */
 public class LoginDto {
@@ -24,8 +26,8 @@ public class LoginDto {
 
     /**
      * Partial constructor
-     * @param username
-     * @param password
+     * @param username user name
+     * @param password password
      */
     public LoginDto(String username, String password) {
         this.username = username;
@@ -33,8 +35,9 @@ public class LoginDto {
     }
     /**
      * Full constructor
-     * @param username
-     * @param password
+     *
+     * @param username user name
+     * @param password password
      */
     public LoginDto(String username, String password, String firstName, String lastName) {
        this(username, password);
@@ -43,26 +46,56 @@ public class LoginDto {
     }
 
 
+    /**
+     * Get the username.
+     *
+     * @return username string
+     */
     public String getUsername() {
         return username;
     }
 
+    /**
+     * set the username.
+     *
+     * @param username username
+     */
     public void setUsername(String username) {
         this.username = username;
     }
 
+    /**
+     * get the password.
+     *
+     * @return password
+     */
     public String getPassword() {
         return password;
     }
 
+    /**
+     * set the password.
+     *
+     * @param password password
+     */
     public void setPassword(String password) {
         this.password = password;
     }
 
+    /**
+     * Get the first name.
+     *
+     * @return first name
+     */
     public String getFirstName() {
         return firstName;
     }
 
+    /**
+     * Get the last name.
+     *
+     * @return last name
+     */
     public String getLastName() {
         return lastName;
     }

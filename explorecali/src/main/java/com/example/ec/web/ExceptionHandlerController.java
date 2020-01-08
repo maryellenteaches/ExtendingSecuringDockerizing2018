@@ -19,12 +19,19 @@ import java.util.Map;
 
 /**
  * Handle all Exceptions in for All controllers
+ *
+ * Created by Mary Ellen Bowman
  */
 @RestControllerAdvice
 public class ExceptionHandlerController {
     private static final Logger LOGGER = LoggerFactory.getLogger(ExceptionHandlerController.class);
 
 
+    /**
+     * Define attributes of an exception that should be visible to the client.
+     *
+     * @return ErrorAttributes object
+     */
     @Bean
     public ErrorAttributes errorAttributes() {
         // Hide exception field in the return object
@@ -39,27 +46,55 @@ public class ExceptionHandlerController {
         };
     }
 
+    /**
+     * Handle AccessDeniedException by returning a HTTP Forbidden status code.
+     *
+     * @param ex exception
+     * @param res http response object
+     * @throws IOException
+     */
     @ExceptionHandler(AccessDeniedException.class)
     public void handleAccessDeniedException(AccessDeniedException ex, HttpServletResponse res) throws IOException {
         res.sendError(HttpStatus.FORBIDDEN.value(), "Access denied");
     }
 
+    /**
+     * Handle HttpServerErrorException by returning the http status code
+     * provided in the exception.
+     *
+     * @param ex exception
+     * @param res http response object
+     * @throws IOException
+     */
     @ExceptionHandler(HttpServerErrorException.class)
     public void handleHttpServerErrorException(HttpServerErrorException ex, HttpServletResponse res) throws IOException {
         res.sendError(ex.getStatusCode().value(),ex.getMessage());
     }
 
+    /**
+     * Handle InsufficientAuthenticationException by returning a HTTP Forbidden status code.
+     *
+     * @param ex exception
+     * @param res http response object
+     * @throws IOException
+     */
     @ExceptionHandler(InsufficientAuthenticationException.class)
     public void handleInsufficientAuthenticationException(InsufficientAuthenticationException ex, HttpServletResponse res) throws IOException {
         LOGGER.error("Handled Insufficient Authentication Exception", ex);
         res.sendError(HttpStatus.FORBIDDEN.value(), "Insufficient Authentication");
     }
 
+    /**
+     * Handle any other exception by returning a HTTP internal server error status code.
+     *
+     * @param ex exception
+     * @param res http response object
+     * @throws IOException
+     */
     @ExceptionHandler(Exception.class)
     public void handleException(Exception ex, HttpServletResponse res) throws IOException {
         LOGGER.error("Handled Internal Error Exception", ex);
         res.sendError(HttpStatus.INTERNAL_SERVER_ERROR.value(), "Something went wrong");
     }
-
 }
 

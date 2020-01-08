@@ -16,7 +16,11 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-
+/**
+ * User Service
+ *
+ * Created by Mary Ellen Bowman.
+ */
 @Service
 public class UserService {
     private static final Logger LOGGER = LoggerFactory.getLogger(UserService.class);
@@ -31,6 +35,15 @@ public class UserService {
 
     private JwtProvider jwtProvider;
 
+    /**
+     * Construct a fully initialized User Service
+     *
+     * @param userRepository user repository
+     * @param authenticationManager authentication manager
+     * @param roleRepository role repository
+     * @param passwordEncoder password encoder
+     * @param jwtProvider jwt provider
+     */
     @Autowired
     public UserService(UserRepository userRepository, AuthenticationManager authenticationManager,
                        RoleRepository roleRepository, PasswordEncoder passwordEncoder, JwtProvider jwtProvider) {
@@ -86,6 +99,11 @@ public class UserService {
         return user;
     }
 
+    /**
+     * Lookup all users in the repository.
+     *
+     * @return list of User entities
+     */
     public List<User> getAll() {
         return userRepository.findAll();
     }

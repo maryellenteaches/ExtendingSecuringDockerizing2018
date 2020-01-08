@@ -37,8 +37,8 @@ public class JwtProvider{
     /**
      * Create JWT string given username and roles.
      *
-     * @param username
-     * @param roles
+     * @param username username
+     * @param roles list of roles
      * @return jwt string
      */
     public String createToken(String username, List<Role> roles) {
@@ -85,8 +85,8 @@ public class JwtProvider{
     /**
      * Get the roles from the token string
      *
-     * @param token jwt
-     * @return username
+     * @param token jwt token string
+     * @return List of Authorities granted
      */
     public List<GrantedAuthority> getRoles(String token) {
         List<Map<String, String>>  roleClaims = Jwts.parser().setSigningKey(secretKey)

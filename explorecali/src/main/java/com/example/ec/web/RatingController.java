@@ -16,6 +16,8 @@ import java.util.NoSuchElementException;
 
 
 /**
+ * Ratings Rest Controller
+ *
  * Created by Mary Ellen Bowman
  */
 @Api("API to just pull ratings")
@@ -27,18 +29,35 @@ public class RatingController {
 
     private RatingAssembler assembler;
 
+    /**
+     * Construct a fully initialized RatingController.
+     *
+     * @param tourRatingService tour rating service
+     * @param assembler rating assembler
+     */
     @Autowired
     public RatingController(TourRatingService tourRatingService, RatingAssembler assembler) {
         this.tourRatingService = tourRatingService;
         this.assembler = assembler;
     }
 
+    /**
+     * Get all Ratings
+     *
+     * @return list of all ratings.
+     */
     @GetMapping
     public List<RatingDto> getAll() {
         LOGGER.info("GET /ratings");
         return assembler.toResources(tourRatingService.lookupAll());
     }
 
+    /**
+     * Get one rating by identifier.
+     *
+     * @param id identifier
+     * @return the rating or http status 404 if not found
+     */
     @GetMapping("/{id}")
     @ApiOperation(value = "Find ratings by id")
     @ApiResponses(value = { @ApiResponse(code = 200, message = "OK"), @ApiResponse(code = 404, message = "Rating not found") })
