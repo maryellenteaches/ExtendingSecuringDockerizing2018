@@ -1,8 +1,5 @@
-# Extending, Securing and Dockerizing Spring Boot Microservices
-"Extending, Securing and Dockerizing Spring Boot Microservices" from LinkedIn Learning.
-by, Mary Ellen Bowman, @MEllenBowman
-
-
+# Microservice to support the Explore California Travel Agency
+### ExploreCalifornia.org
 
 Final Product requires External MySql Database.
 Install Docker For Mac/Windows/Linux
