@@ -1,5 +1,3 @@
-
-
 ## [Extending, Securing and Dockerizing Spring Boot Microservices](http://linkedin-learning.pxf.io/3aGqA)
 ## [  by Mary Ellen Bowman for LinkedIn Learning](http://linkedin-learning.pxf.io/3aGqA)
 
@@ -11,12 +9,10 @@ Branches correspond to videos (chapter-lesson), Master branch is the final capst
 
 ### 1. Enhancing a Spring Boot Microservice
 
-#### 1.1 Reviewing the original Spring Boot microservice
-#### 1.2 Running the microservice
-#### 1.3 Define the schema and default data
-#### 1.4 Identify transactional business services boundaries
-#### 1.5 Leveraging Spring HATEOAS
-#### 1.6 Decorate paging APIs with HATEOAS links
+#### 1.1 Running the microservice
+#### 1.2 Define the schema and default data
+#### 1.3 Identify transactional business services boundaries
+
 
 ### 2. Hardening the Microservice
 #### 2.1 Adding a runtime logger
@@ -42,7 +38,7 @@ Branches correspond to videos (chapter-lesson), Master branch is the final capst
 #### 5.1 Create and run a Java application Docker image
 #### 5.2 Link the Java application and database Docker containers
 #### 5.3 Separate application image from database migration
-#### 5.4 Leverage a Docker Maven plugin
+#### 5.4 Leverage Spring Boot Docker Commands
 #### 5.5 Sharing images with Docker hub
 #### 5.6 Save Sharing images with Docker hub
 
