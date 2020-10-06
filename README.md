@@ -1,3 +1,4 @@
+## Deprecated, Please see current Exercise files [Here](https://github.com/maryellenteaches/ExtendingSecuringDockerizing)
 ## [Extending, Securing and Dockerizing Spring Boot Microservices](http://linkedin-learning.pxf.io/3aGqA)
 ## [  by Mary Ellen Bowman for LinkedIn Learning](http://linkedin-learning.pxf.io/3aGqA)
 
